@@ -1,0 +1,51 @@
+﻿@model QuickChef1._0.Models.menu
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>menu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombrePlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombrePlatillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionPlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionPlatillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.porcionesPlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.porcionesPlatillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioPlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioPlatillo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.platilloID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

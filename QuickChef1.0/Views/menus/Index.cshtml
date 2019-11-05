@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QuickChef1._0.Models.menu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombrePlatillo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcionPlatillo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.porcionesPlatillo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precioPlatillo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombrePlatillo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionPlatillo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.porcionesPlatillo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precioPlatillo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.platilloID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.platilloID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.platilloID })
+        </td>
+    </tr>
+}
+
+</table>
