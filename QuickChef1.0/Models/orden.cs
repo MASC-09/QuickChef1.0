@@ -15,16 +15,15 @@
 
         public int? Mesa { get; set; }
 
-        
+
         public string platilloID { get; set; }
 
         public int? cantidad { get; set; }
-
-        
+        public string EstadoOrden { get;set; }
     }
-
-    public class ordenContext : DbContext
+    public class NOrdenContext : DbContext
     {
-        public DbSet<orden> orden { get; set; }
+        public DbSet<orden> nOrden { get; set; }
     }
+
 }

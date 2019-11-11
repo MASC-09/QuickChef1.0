@@ -133,15 +133,15 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\inventariosController.cs" />
     <Compile Include="Controllers\menusController.cs" />
-    <Compile Include="Controllers\ordenController.cs" />
+    <Compile Include="Controllers\ordenesAdminController.cs" />
+    <Compile Include="Controllers\ordenesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\admin.cs" />
     <Compile Include="Models\inventario.cs" />
     <Compile Include="Models\menu.cs" />
-    <Compile Include="Models\orden.cs" />
-    <Compile Include="Controllers\ordensController.cs" />
+    <Compile Include="Models\Orden.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -199,11 +199,14 @@
     <Content Include="Views\inventarios\Edit.cshtml" />
     <Content Include="Views\inventarios\Index.cshtml" />
     <Content Include="Views\orden.cshtml" />
-    <Content Include="Views\ordens\Create.cshtml" />
-    <Content Include="Views\ordens\Delete.cshtml" />
-    <Content Include="Views\ordens\Details.cshtml" />
-    <Content Include="Views\ordens\Edit.cshtml" />
-    <Content Include="Views\ordens\Index.cshtml" />
+    <Content Include="Views\ordenesAdmin\Details.cshtml" />
+    <Content Include="Views\ordenesAdmin\Edit.cshtml" />
+    <Content Include="Views\ordenesAdmin\Index.cshtml" />
+    <Content Include="Views\ordenes\Create.cshtml" />
+    <Content Include="Views\ordenes\Delete.cshtml" />
+    <Content Include="Views\ordenes\Details.cshtml" />
+    <Content Include="Views\ordenes\Edit.cshtml" />
+    <Content Include="Views\ordenes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
