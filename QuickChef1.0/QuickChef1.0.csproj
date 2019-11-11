@@ -133,12 +133,15 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\inventariosController.cs" />
     <Compile Include="Controllers\menusController.cs" />
+    <Compile Include="Controllers\ordenController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\admin.cs" />
     <Compile Include="Models\inventario.cs" />
     <Compile Include="Models\menu.cs" />
+    <Compile Include="Models\orden.cs" />
+    <Compile Include="Controllers\ordensController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +156,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Controllers\ordenController" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -194,9 +198,16 @@
     <Content Include="Views\inventarios\Details.cshtml" />
     <Content Include="Views\inventarios\Edit.cshtml" />
     <Content Include="Views\inventarios\Index.cshtml" />
+    <Content Include="Views\orden.cshtml" />
+    <Content Include="Views\ordens\Create.cshtml" />
+    <Content Include="Views\ordens\Delete.cshtml" />
+    <Content Include="Views\ordens\Details.cshtml" />
+    <Content Include="Views\ordens\Edit.cshtml" />
+    <Content Include="Views\ordens\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\App_LocalResources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
