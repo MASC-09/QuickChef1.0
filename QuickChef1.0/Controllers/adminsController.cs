@@ -41,7 +41,7 @@ namespace QuickChef1._0.Controllers
                     //this will add cookies for the username.
                     Response.Cookies.Add(new HttpCookie("Users1", users.UserName));
                     //This is a different Controller for the User Homepage. Redirecting after successful process.
-                    return RedirectToAction("Index", "Menus");
+                    return RedirectToAction("Index", "AdminHub");
                 }
                 else
                     ViewBag.ErrorMessage = message;
