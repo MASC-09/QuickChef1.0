@@ -12,116 +12,42 @@ namespace QuickChef1._0.Controllers
 {
     public class adminsController : Controller
     {
-        private AdminContext db = new AdminContext();
+        //private AdminContext db = new AdminContext();
 
-        // GET: admins
+        // GET: /UserLogin/
         public ActionResult Index()
-        {
-            return View(db.admins.ToList());
-        }
-
-        // GET: admins/Details/5
-        public ActionResult Details(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            admin admin = db.admins.Find(id);
-            if (admin == null)
-            {
-                return HttpNotFound();
-            }
-            return View(admin);
-        }
-
-        // GET: admins/Create
-        public ActionResult Create()
         {
             return View();
         }
 
-        // POST: admins/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpGet]
+        public ActionResult UserLogin()
+        {
+            return View();
+        }
+        //nombre de mis campos en la tabla adminID passwordAdmin
+
+        //This the Login method. It passes a object of my Model Class named "User".
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "adminID,passwordAdmin")] admin admin)
+        public ActionResult UserLogin(admin users)
         {
             if (ModelState.IsValid)
             {
-                db.admins.Add(admin);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                //message will collect the String value from the model method.
+                String message = users.LoginProcess(users.adminID, users.passwordAdmin);
+                //RedirectToAction("actionName/ViewName_ActionResultMethodName", "ControllerName");
+                if (message.Equals("1"))
+                {
+                    //this will add cookies for the username.
+                    Response.Cookies.Add(new HttpCookie("Users1", users.UserName));
+                    //This is a different Controller for the User Homepage. Redirecting after successful process.
+                    return RedirectToAction("Index", "Menus");
+                }
+                else
+                    ViewBag.ErrorMessage = message;
             }
-
-            return View(admin);
+            return View(users);
         }
 
-        // GET: admins/Edit/5
-        public ActionResult Edit(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            admin admin = db.admins.Find(id);
-            if (admin == null)
-            {
-                return HttpNotFound();
-            }
-            return View(admin);
-        }
-
-        // POST: admins/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "adminID,passwordAdmin")] admin admin)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(admin).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(admin);
-        }
-
-        // GET: admins/Delete/5
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            admin admin = db.admins.Find(id);
-            if (admin == null)
-            {
-                return HttpNotFound();
-            }
-            return View(admin);
-        }
-
-        // POST: admins/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
-        {
-            admin admin = db.admins.Find(id);
-            db.admins.Remove(admin);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
     }
 }

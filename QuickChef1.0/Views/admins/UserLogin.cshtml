@@ -1,0 +1,54 @@
+﻿@model QuickChef1._0.Models.admin
+@{
+
+    ViewBag.Title = "UserLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //nombre de mis campos en la tabla adminID passwordAdmin
+}
+
+<h2>Admin Login</h2>
+
+@using (Html.BeginForm())
+{
+    <table width="100%">
+        <tr>
+            <td align="center">
+                <table class="table-condensed">
+                    <tr>
+                        <td align="left">
+                            @Html.LabelFor(m => m.adminID)
+                        </td>
+                        <td align="right">
+                            @Html.TextBoxFor(m => m.adminID)
+                            &nbsp;&nbsp;
+                            <br />
+                            @Html.ValidationMessageFor(m => m.adminID)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            @Html.LabelFor(m => m.passwordAdmin)
+                        </td>
+                        <td align="right">
+                            @Html.EditorFor(m => m.passwordAdmin)
+                            <!--, new { htmlAttributes = new { esto lleva un arroba -> class = "form-control", placeholder = "Password" } })-->
+                            &nbsp;&nbsp;
+                            <br />
+                            @Html.ValidationMessageFor(m => m.passwordAdmin)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Igresar" class="btn btn-primary" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+                @ViewBag.ErrorMessage
+            </td>
+        </tr>
+    </table>
+}

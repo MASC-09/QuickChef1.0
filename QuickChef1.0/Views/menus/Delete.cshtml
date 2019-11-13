@@ -5,15 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>Borrar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>¿Está seguro que quiere borrar el platillo?</h3>
 <div>
-    <h4>menu</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nombrePlatillo)
+            <label>Platillo</label>
         </dt>
 
         <dd>
@@ -21,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.descripcionPlatillo)
+            <lable>Descripción</lable>
         </dt>
 
         <dd>
@@ -29,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.porcionesPlatillo)
+            <lable>Porciones</lable>
         </dt>
 
         <dd>
@@ -37,7 +36,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.precioPlatillo)
+            <lable>Precio</lable>
         </dt>
 
         <dd>
@@ -50,8 +49,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Borrar" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar", "Index")  
         </div>
     }
 </div>
