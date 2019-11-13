@@ -5,18 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Inventario de Productos</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Agregar", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombreProducto)
+            <p>Producto</p>
+            <!--Html.DisplayNameFor(model => model.nombreProducto)-->
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.cantidadProducto)
+            <p>Cantidad</p>
+            <!--Html.DisplayNameFor(model => model.cantidadProducto)-->
         </th>
         <th></th>
     </tr>
@@ -30,11 +32,15 @@
             @Html.DisplayFor(modelItem => item.cantidadProducto)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.productoID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.productoID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.productoID })
+            @Html.ActionLink("Editar", "Edit", new { id=item.productoID }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.productoID }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.productoID })
         </td>
     </tr>
 }
 
 </table>
+<div align="right">
+    <a href="/AdminHub" class="btn btn-success" role="button" aria-pressed="true">AdminHub</a>
+    <a href="/Logout" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
+</div>

@@ -5,20 +5,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>Editar</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>inventario</h4>
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.productoID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.nombreProducto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <p>Producto</p>
+            <!--Html.LabelFor(model => model.nombreProducto, htmlAttributes: new { class = "control-label col-md-2" })-->
             <div class="col-md-10">
                 @Html.EditorFor(model => model.nombreProducto, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.nombreProducto, "", new { @class = "text-danger" })
@@ -26,17 +27,19 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.cantidadProducto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <p>Cantidad</p>
+            <!--Html.LabelFor(model => model.cantidadProducto, htmlAttributes: new { class = "control-label col-md-2" })-->
             <div class="col-md-10">
                 @Html.EditorFor(model => model.cantidadProducto, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.cantidadProducto, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
+
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Guardar" class="btn btn-success" />
         </div>
     </div>
 }

@@ -59,24 +59,16 @@
     @if (arreglo[2] == 1)
     {
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id = item.platilloID })
-
+            @Html.ActionLink("Editar", "Edit", new { id = item.platilloID }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.platilloID }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.platilloID }) 
         </td>
     }
-    @if (arreglo[3] ==1)
-    {
-        <td>
-            @Html.ActionLink("Borrar", "Delete", new { id = item.platilloID })
-            
-        </td>
-    }
-    @if(arreglo[4] == 1)
-    { 
-        <td>
-            @Html.ActionLink("Detalles", "Details", new { id = item.platilloID })
-        </td>
-        }
 </tr>
     }
+     </table>
 
-    </table>
+<div align="right">
+    <a href="/AdminHub" class="btn btn-success" role="button" aria-pressed="true">AdminHub</a>
+    <a href="/Logout" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
+</div>
