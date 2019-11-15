@@ -7,6 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
+<!--NavBar lista (Miguel)-->
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -20,12 +21,18 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <!--<li>@Html.ActionLink("About", "About", "Home")</li>-->
-                    <li>@Html.ActionLink("Login", "Login", "Login")</li>
-                    <li>@Html.ActionLink("Menu", "Index", "menus")</li>
-                    <li>@Html.ActionLink("Orden", "Index", "ordens")</li>
-                    <li>@Html.ActionLink("Inventario", "Index", "inventarios")</li>
+                    <li>@Html.ActionLink("Ver Menú","Index","Ordenar")</li>
+                    <li>@Html.ActionLink("Ver Factura","Index","Facturas")</li>
+                    <!--
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Menu", "Index", "menus")</li>
+                        <li>@Html.ActionLink("Orden", "Index", "ordens")</li>
+                        <li>@Html.ActionLink("Inventario", "Index", "inventarios")</li>
+                    -->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Admin", "UserLogin", "Admins")<li />
                 </ul>
             </div>
         </div>

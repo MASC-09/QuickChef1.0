@@ -35,3 +35,4 @@ msbuild.wrn
 
 # Visual Studio 2015
 .vs/
+QuickChef1.0/obj/Debug/QuickChef1.0.csprojAssemblyReference.cache

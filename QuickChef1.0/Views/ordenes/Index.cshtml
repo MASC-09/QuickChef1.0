@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Órdenes Abiertas</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nueva Orden", "Create")
 </p>
 <table class="table">
     <tr>
@@ -42,11 +42,16 @@
             @Html.DisplayFor(modelItem => item.EstadoOrden)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.relativo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.relativo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.relativo })
+            @Html.ActionLink("Editar", "Edit", new { id=item.relativo }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.relativo }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.relativo })
         </td>
     </tr>
 }
 
 </table>
+
+<div align="right">
+    <a href="/AdminHub" class="btn btn-success" role="button" aria-pressed="true">AdminHub</a>
+    <a href="/Logout" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
+</div>

@@ -3,50 +3,72 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    bool existe = true;
+    int[] arreglo = {1,1,1,1,1};
+    int []arreglo2 = {0,0,0,0,0,};
+
 }
 
-<h2>Index</h2>
+<h2>Menú de Platillos</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
+@if(arreglo[1] == 1)
+{
+    <p>
+        @Html.ActionLink("Agregar Platillo", "Create")
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombrePlatillo)
+            
+            <p>Platillo</p>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.descripcionPlatillo)
+            <p>Descripción</p>
+            <!--Html.DisplayNameFor(model => model.descripcionPlatillo)-->
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.porcionesPlatillo)
-        </th>
+            <p>Porciones</p>
+            <!--Html.DisplayNameFor(model => model.porcionesPlatillo)-->
+            </th>
         <th>
-            @Html.DisplayNameFor(model => model.precioPlatillo)
-        </th>
-        <th></th>
-    </tr>
+            <p>Precio</p>
+            <!--Html.DisplayNameFor(model => model.precioPlatillo)-->
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombrePlatillo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.descripcionPlatillo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.porcionesPlatillo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.precioPlatillo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.platilloID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.platilloID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.platilloID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.nombrePlatillo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.descripcionPlatillo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.porcionesPlatillo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.precioPlatillo)
+    </td>
 
-</table>
+
+    @if (arreglo[2] == 1)
+    {
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.platilloID }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.platilloID }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.platilloID }) 
+        </td>
+    }
+</tr>
+    }
+     </table>
+
+<div align="right">
+    <a href="/AdminHub" class="btn btn-success" role="button" aria-pressed="true">AdminHub</a>
+    <a href="/Logout" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
+</div>
