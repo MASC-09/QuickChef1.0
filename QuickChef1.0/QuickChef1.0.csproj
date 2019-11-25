@@ -129,9 +129,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminEncuestasController.cs" />
     <Compile Include="Controllers\adminsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\inventariosController.cs" />
+    <Compile Include="Controllers\LlenarEncuestaController.cs" />
     <Compile Include="Controllers\menusController.cs" />
     <Compile Include="Controllers\ordenesAdminController.cs" />
     <Compile Include="Controllers\ordenesController.cs" />
@@ -139,6 +141,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\admin.cs" />
+    <Compile Include="Models\Encuesta.cs" />
     <Compile Include="Models\inventario.cs" />
     <Compile Include="Models\menu.cs" />
     <Compile Include="Models\Orden.cs" />
@@ -207,6 +210,16 @@
     <Content Include="Views\ordenes\Details.cshtml" />
     <Content Include="Views\ordenes\Edit.cshtml" />
     <Content Include="Views\ordenes\Index.cshtml" />
+    <Content Include="Views\AdminEncuestas\Create.cshtml" />
+    <Content Include="Views\AdminEncuestas\Delete.cshtml" />
+    <Content Include="Views\AdminEncuestas\Details.cshtml" />
+    <Content Include="Views\AdminEncuestas\Edit.cshtml" />
+    <Content Include="Views\AdminEncuestas\Index.cshtml" />
+    <Content Include="Views\LlenarEncuesta\Create.cshtml" />
+    <Content Include="Views\LlenarEncuesta\Delete.cshtml" />
+    <Content Include="Views\LlenarEncuesta\Details.cshtml" />
+    <Content Include="Views\LlenarEncuesta\Edit.cshtml" />
+    <Content Include="Views\LlenarEncuesta\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
