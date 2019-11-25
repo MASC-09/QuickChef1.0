@@ -12,17 +12,12 @@ namespace QuickChef1._0.Controllers
 {
     public class AdminEncuestasController : Controller
     {
-        public ActionResult LlenarEncuesta()
-        {
-            return View();
-        }
-
         private EncuestaContext db = new EncuestaContext();
 
         // GET: AdminEncuestas
         public ActionResult Index()
         {
-            return View(db.Encuesta.ToList());
+            return View(db.encuestas.ToList());
         }
 
         // GET: AdminEncuestas/Details/5
@@ -32,7 +27,7 @@ namespace QuickChef1._0.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Encuesta encuesta = db.Encuesta.Find(id);
+            Encuesta encuesta = db.encuestas.Find(id);
             if (encuesta == null)
             {
                 return HttpNotFound();
@@ -55,7 +50,7 @@ namespace QuickChef1._0.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Encuesta.Add(encuesta);
+                db.encuestas.Add(encuesta);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -70,7 +65,7 @@ namespace QuickChef1._0.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Encuesta encuesta = db.Encuesta.Find(id);
+            Encuesta encuesta = db.encuestas.Find(id);
             if (encuesta == null)
             {
                 return HttpNotFound();
@@ -101,7 +96,7 @@ namespace QuickChef1._0.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Encuesta encuesta = db.Encuesta.Find(id);
+            Encuesta encuesta = db.encuestas.Find(id);
             if (encuesta == null)
             {
                 return HttpNotFound();
@@ -114,8 +109,8 @@ namespace QuickChef1._0.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Encuesta encuesta = db.Encuesta.Find(id);
-            db.Encuesta.Remove(encuesta);
+            Encuesta encuesta = db.encuestas.Find(id);
+            db.encuestas.Remove(encuesta);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

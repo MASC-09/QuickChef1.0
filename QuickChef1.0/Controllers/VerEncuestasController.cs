@@ -10,24 +10,24 @@ using QuickChef1._0.Models;
 
 namespace QuickChef1._0.Controllers
 {
-    public class LlenarEncuestaController : Controller
+    public class VerEncuestasController : Controller
     {
         private EncuestaContext db = new EncuestaContext();
 
-        // GET: LlenarEncuesta
+        // GET: VerEncuestas
         public ActionResult Index()
         {
-            return View(db.Encuesta.ToList());
+            return View(db.encuestas.ToList());
         }
 
-        // GET: LlenarEncuesta/Details/5
+        // GET: VerEncuestas/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Encuesta encuesta = db.Encuesta.Find(id);
+            Encuesta encuesta = db.encuestas.Find(id);
             if (encuesta == null)
             {
                 return HttpNotFound();
@@ -35,13 +35,13 @@ namespace QuickChef1._0.Controllers
             return View(encuesta);
         }
 
-        // GET: LlenarEncuesta/Create
+        // GET: VerEncuestas/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: LlenarEncuesta/Create
+        // POST: VerEncuestas/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -50,7 +50,7 @@ namespace QuickChef1._0.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Encuesta.Add(encuesta);
+                db.encuestas.Add(encuesta);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -58,14 +58,14 @@ namespace QuickChef1._0.Controllers
             return View(encuesta);
         }
 
-        // GET: LlenarEncuesta/Edit/5
+        // GET: VerEncuestas/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Encuesta encuesta = db.Encuesta.Find(id);
+            Encuesta encuesta = db.encuestas.Find(id);
             if (encuesta == null)
             {
                 return HttpNotFound();
@@ -73,7 +73,7 @@ namespace QuickChef1._0.Controllers
             return View(encuesta);
         }
 
-        // POST: LlenarEncuesta/Edit/5
+        // POST: VerEncuestas/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,14 +89,14 @@ namespace QuickChef1._0.Controllers
             return View(encuesta);
         }
 
-        // GET: LlenarEncuesta/Delete/5
+        // GET: VerEncuestas/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Encuesta encuesta = db.Encuesta.Find(id);
+            Encuesta encuesta = db.encuestas.Find(id);
             if (encuesta == null)
             {
                 return HttpNotFound();
@@ -104,13 +104,13 @@ namespace QuickChef1._0.Controllers
             return View(encuesta);
         }
 
-        // POST: LlenarEncuesta/Delete/5
+        // POST: VerEncuestas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Encuesta encuesta = db.Encuesta.Find(id);
-            db.Encuesta.Remove(encuesta);
+            Encuesta encuesta = db.encuestas.Find(id);
+            db.encuestas.Remove(encuesta);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

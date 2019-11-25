@@ -133,10 +133,10 @@
     <Compile Include="Controllers\adminsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\inventariosController.cs" />
-    <Compile Include="Controllers\LlenarEncuestaController.cs" />
     <Compile Include="Controllers\menusController.cs" />
     <Compile Include="Controllers\ordenesAdminController.cs" />
     <Compile Include="Controllers\ordenesController.cs" />
+    <Compile Include="Controllers\VerEncuestasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,16 +210,16 @@
     <Content Include="Views\ordenes\Details.cshtml" />
     <Content Include="Views\ordenes\Edit.cshtml" />
     <Content Include="Views\ordenes\Index.cshtml" />
+    <Content Include="Views\VerEncuestas\Create.cshtml" />
+    <Content Include="Views\VerEncuestas\Delete.cshtml" />
+    <Content Include="Views\VerEncuestas\Details.cshtml" />
+    <Content Include="Views\VerEncuestas\Edit.cshtml" />
+    <Content Include="Views\VerEncuestas\Index.cshtml" />
     <Content Include="Views\AdminEncuestas\Create.cshtml" />
     <Content Include="Views\AdminEncuestas\Delete.cshtml" />
     <Content Include="Views\AdminEncuestas\Details.cshtml" />
     <Content Include="Views\AdminEncuestas\Edit.cshtml" />
     <Content Include="Views\AdminEncuestas\Index.cshtml" />
-    <Content Include="Views\LlenarEncuesta\Create.cshtml" />
-    <Content Include="Views\LlenarEncuesta\Delete.cshtml" />
-    <Content Include="Views\LlenarEncuesta\Details.cshtml" />
-    <Content Include="Views\LlenarEncuesta\Edit.cshtml" />
-    <Content Include="Views\LlenarEncuesta\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
