@@ -5,11 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<h2>Ver Encuestas</h2>
 <table class="table">
     <tr>
         <th>
@@ -30,9 +26,7 @@
             @Html.DisplayFor(modelItem => item.Puntuacion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EncuestaID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EncuestaID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EncuestaID })
+            @Html.ActionLink("Detalles", "Details", new { id=item.EncuestaID }) |
         </td>
     </tr>
 }

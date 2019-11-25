@@ -211,14 +211,7 @@
     <Content Include="Views\ordenes\Edit.cshtml" />
     <Content Include="Views\ordenes\Index.cshtml" />
     <Content Include="Views\VerEncuestas\Create.cshtml" />
-    <Content Include="Views\VerEncuestas\Delete.cshtml" />
-    <Content Include="Views\VerEncuestas\Details.cshtml" />
-    <Content Include="Views\VerEncuestas\Edit.cshtml" />
-    <Content Include="Views\VerEncuestas\Index.cshtml" />
-    <Content Include="Views\AdminEncuestas\Create.cshtml" />
-    <Content Include="Views\AdminEncuestas\Delete.cshtml" />
     <Content Include="Views\AdminEncuestas\Details.cshtml" />
-    <Content Include="Views\AdminEncuestas\Edit.cshtml" />
     <Content Include="Views\AdminEncuestas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
