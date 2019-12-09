@@ -130,7 +130,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminEncuestasController.cs" />
+    <Compile Include="Controllers\AdminFacturasController.cs" />
     <Compile Include="Controllers\adminsController.cs" />
+    <Compile Include="Controllers\CFacturasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\inventariosController.cs" />
     <Compile Include="Controllers\menusController.cs" />
@@ -142,6 +144,7 @@
     </Compile>
     <Compile Include="Models\admin.cs" />
     <Compile Include="Models\Encuesta.cs" />
+    <Compile Include="Models\Factura.cs" />
     <Compile Include="Models\inventario.cs" />
     <Compile Include="Models\menu.cs" />
     <Compile Include="Models\Orden.cs" />
@@ -213,6 +216,16 @@
     <Content Include="Views\VerEncuestas\Create.cshtml" />
     <Content Include="Views\AdminEncuestas\Details.cshtml" />
     <Content Include="Views\AdminEncuestas\Index.cshtml" />
+    <Content Include="Views\CFacturas\Create.cshtml" />
+    <Content Include="Views\CFacturas\Delete.cshtml" />
+    <Content Include="Views\CFacturas\Details.cshtml" />
+    <Content Include="Views\CFacturas\Edit.cshtml" />
+    <Content Include="Views\CFacturas\Index.cshtml" />
+    <Content Include="Views\AdminFacturas\Create.cshtml" />
+    <Content Include="Views\AdminFacturas\Delete.cshtml" />
+    <Content Include="Views\AdminFacturas\Details.cshtml" />
+    <Content Include="Views\AdminFacturas\Edit.cshtml" />
+    <Content Include="Views\AdminFacturas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
